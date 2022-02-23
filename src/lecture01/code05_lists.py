@@ -1,27 +1,34 @@
+>>> # -------------------------------------------------------------------------
+>>> # Indexing & Slicing
 
+>>> # a list
 >>> squares = [1, 4, 9, 16, 25]
 >>> squares
 [1, 4, 9, 16, 25]
 
+>>> # Indexing
 >>> squares[0]  # indexing returns the item
 1
 >>> squares[-1]
 25
+
+>>> # Slicing
 >>> squares[-3:]  # slicing returns a new list
 [9, 16, 25]
 
-# All slice operations return a new list containing the requested elements. This means that the following slice returns a shallow copy of the list:
+# All slice operations return a new list containing the requested elements.
+# This means that the following slice returns a shallow copy of the list:
 >>> squares[:]
 [1, 4, 9, 16, 25]
 
+>>> # -------------------------------------------------------------------------
 # concatenation
 >>> squares + [36, 49, 64, 81, 100]
 [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 
+>>> # -------------------------------------------------------------------------
 # mutable
 >>> cubes = [1, 8, 27, 65, 125]  # something's wrong here
->>> 4 ** 3  # the cube of 4 is 64, not 65!
-64
 >>> cubes[3] = 64  # replace the wrong value
 >>> cubes
 [1, 8, 27, 64, 125]
@@ -34,11 +41,7 @@
 >>> letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 >>> letters
 ['a', 'b', 'c', 'd', 'e', 'f', 'g']
->>> # replace some values
->>> letters[2:5] = ['C', 'D', 'E']
->>> letters
-['a', 'b', 'C', 'D', 'E', 'f', 'g']
->>> # now remove them
+>>> # remove c, d, e
 >>> letters[2:5] = []
 >>> letters
 ['a', 'b', 'f', 'g']
@@ -47,10 +50,12 @@
 >>> letters
 []
 
+>>> # -------------------------------------------------------------------------
 >>> letters = ['a', 'b', 'c', 'd']
 >>> len(letters)
 4
 
+>>> # -------------------------------------------------------------------------
 # nested lists
 >>> a = ['a', 'b', 'c']
 >>> n = [1, 2, 3]
