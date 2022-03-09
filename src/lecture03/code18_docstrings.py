@@ -1,5 +1,5 @@
 # docstrings.py
-def square(n):
+def square(n: int) -> int:
     """Return the square of a number n. """
     return n ** 2
 
@@ -8,7 +8,7 @@ def get_username(userid):
     return db.get(user_id=userid).username
 
 
-def connect(host, port, user, password):
+def connect(host: str, port: int, user: str, password: str) -> object:
     """Connect to a database.
 
     Connect to a PostgreSQL database directly, using the given
